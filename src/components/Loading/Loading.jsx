@@ -1,12 +1,13 @@
 import React from "react";
-import { ThreeCircles } from "react-loader-spinner";
+import { Oval } from "react-loader-spinner";
+
 const Loading = ({
   size = 80,
   color = "#4fa94d",
   text = "Loading",
-  showCircles = true,
-  circleSize = 100,
-  circleColor = "#4fa94d",
+  showLoader = true,
+  loaderSize = 100,
+  loaderColor = "#4fa94d",
   textColor = "green",
   textStyle = {},
 }) => {
@@ -22,18 +23,14 @@ const Loading = ({
         gap: "5px",
       }}
     >
-      {showCircles && (
-        <ThreeCircles
-          height={circleSize}
-          width={circleSize}
-          color={circleColor}
+      {showLoader && (
+        <Oval
+          height={loaderSize}
+          width={loaderSize}
+          color={loaderColor}
           wrapperStyle={{}}
-          wrapperClass=""
           visible={true}
-          ariaLabel="three-circles-rotating"
-          outerCircleColor=""
-          innerCircleColor=""
-          middleCircleColor=""
+          ariaLabel="oval-loading"
         />
       )}
       <span
@@ -50,8 +47,5 @@ const Loading = ({
     </div>
   );
 };
+
 export default Loading;
-
-
-
-
