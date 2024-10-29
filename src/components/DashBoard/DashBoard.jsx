@@ -18,12 +18,12 @@ const DashBoard = () => {
               <div className="dashCardHeading flex-sb">
                 <div className="leftView">
                   {user ? (
-                    <div className="imageContainer relative" style={{ width: "16px", height: "15px", display: "inline-block" }}>
+                    <div className="imageContainer relative" style={{ width: "18px", height: "15px", display: "inline-block" }}>
                       <img
-              style={{ width: "15px", height: "15px", borderRadius: "50%" }}
-              src={`${process.env.PUBLIC_URL}/man1.jpg`} 
-              alt="UserImage"
-            />
+                        style={{ width: "15px", height: "15px", borderRadius: "50%" }}
+                        src={`${process.env.PUBLIC_URL}/man1.jpg`}
+                        alt="UserImage"
+                      />
                     </div>
                   ) : isStatus ? (
                     <div className="cardTitle" style={{ width: "15px", height: "15px", display: "inline-block", fontWeight: 200 }}>
@@ -59,7 +59,8 @@ const DashBoard = () => {
                     <img src="./down.svg" alt="Codeigniter" style={{ width: "24px", height: "24px" }} />
                   )}
                   <span>
-                    {element[index]?.title} {element[index].value?.length}
+                    {element[index]?.title}{" "}
+                    <span style={{ color: "grey" }}>{element[index].value?.length}</span>
                   </span>
                 </div>
                 <div className="rightView">
@@ -71,7 +72,7 @@ const DashBoard = () => {
                 {element[index]?.value?.map((element, ind) => {
                   return (
                     <Card
-                      key={element.id} 
+                      key={element.id}
                       id={element.id}
                       title={element.title}
                       tag={element.tag}
@@ -91,7 +92,7 @@ const DashBoard = () => {
                 <div className="cardTitle" style={{ width: "13px", height: "13px", display: "inline-block", fontWeight: 200 }}>
                   <img src="./Done.svg" alt="Done" style={{ width: "13px", height: "13px", color: "blue" }} />
                 </div>{" "}
-                <span style={{ fontSize: "13px", fontWeight: "lighter" }}>Done</span> <span style={{ fontSize: "13px", color: "#8F9997" }}>0</span>
+                <span style={{ fontSize: "16px", fontWeight: "lighter" }}>Done</span> <span style={{ fontSize: "16px", color: "#8F9997" }}>0</span>
               </div>
               <div className="rightView">
                 <img src="./add.svg" alt="Add" style={{ width: "24px", height: "24px" }} />
@@ -103,7 +104,7 @@ const DashBoard = () => {
                 <div className="cardTitle" style={{ width: "9px", height: "9px", display: "inline-block", fontWeight: 200 }}>
                   <img src="Cancelled.svg" alt="Canceled" style={{ width: "9px", height: "9px", color: "grey" }} />
                 </div>{" "}
-                <span style={{ fontSize: "13px", fontWeight: "lighter" }}>Canceled</span> <span style={{ fontSize: "13px", color: "#8F9997" }}>0</span>
+                <span style={{ fontSize: "16px", fontWeight: "lighter" }}>Canceled</span> <span style={{ fontSize: "16px", color: "#8F9997" }}>0</span>
               </div>
               <div className="rightView">
                 <img src="./add.svg" alt="Add" style={{ width: "24px", height: "24px" }} />
