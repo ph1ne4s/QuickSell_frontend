@@ -18,7 +18,13 @@ const DashBoard = () => {
               <div className="dashCardHeading flex-sb">
                 <div className="leftView">
                   {user ? (
-                    <div className="imageContainer relative" style={{ width: "10px", height: "15px", display: "inline-block" }}></div>
+                    <div className="imageContainer relative" style={{ width: "16px", height: "15px", display: "inline-block" }}>
+                      <img
+              style={{ width: "15px", height: "15px", borderRadius: "50%" }}
+              src={`${process.env.PUBLIC_URL}/man1.jpg`} 
+              alt="UserImage"
+            />
+                    </div>
                   ) : isStatus ? (
                     <div className="cardTitle" style={{ width: "15px", height: "15px", display: "inline-block", fontWeight: 200 }}>
                       {element[index].title === "Backlog" ? (
@@ -51,11 +57,7 @@ const DashBoard = () => {
                     </div>
                   ) : (
                     <img src="./down.svg" alt="Codeigniter" style={{ width: "24px", height: "24px" }} />
-                  )}<img
-                  style={{ width: "18px", height: "18px", borderRadius: "50%" }}
-                  src="man1.jpg"
-                  alt="UserImage"
-                />
+                  )}
                   <span>
                     {element[index]?.title} {element[index].value?.length}
                   </span>
