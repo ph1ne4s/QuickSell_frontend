@@ -51,7 +51,11 @@ const DashBoard = () => {
                     </div>
                   ) : (
                     <img src="./down.svg" alt="Codeigniter" style={{ width: "24px", height: "24px" }} />
-                  )}
+                  )}<img
+                  style={{ width: "18px", height: "18px", borderRadius: "50%" }}
+                  src="man1.jpg"
+                  alt="UserImage"
+                />
                   <span>
                     {element[index]?.title} {element[index].value?.length}
                   </span>
